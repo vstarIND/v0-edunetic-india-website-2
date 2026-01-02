@@ -4,6 +4,7 @@ import { Poppins, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { GlowingCursor } from "@/components/glowing-cursor"
+import { AIAssistant } from "@/components/ai-assistant"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${inter.variable} font-sans antialiased`}>
         <GlowingCursor />
         {children}
+        <AIAssistant />
         <Analytics />
       </body>
     </html>
